@@ -22,13 +22,14 @@ function question1(num1, num2, num3){
 function question2(){
     for(var i = 1; i < 101; i++){
         if(i % 5 == 0 && i % 3 == 0){
-            console.log("Fizz");
+            console.log("FizzBuzz");
+           
         }
         else if( i % 5 == 0){
             console.log("Buzz");
         }
         else if (i % 3 == 0){
-            console.log("FizzBuzz");
+            console.log("Fizz");
         }
         else{
             console.log(i);
@@ -48,6 +49,7 @@ function question3(){
 
 function question4(){
     var fail = 0;
+    var sucess = false;
     num2 = 1
     while(fail !=3 ){
         num = prompt("Enter a number between 1-10")
@@ -66,13 +68,18 @@ function question4(){
         }
         if (num == num2){
             alert("Good Work")
-            fail = 3;
+            sucess = true;
+            break;
         }
         if(fail == 3){
             alert("game over")
         }
     }
     
+}
+
+function question5(){
+
 }
 
 var q1 = question1(3, -7, 2);
