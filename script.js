@@ -50,14 +50,14 @@ function question3(){
 function question4(){
     var fail = 0;
     var sucess = false;
-    num2 = 1
+    num = 1
     while(fail !=3 ){
-        num = prompt("Enter a number between 1-10")
-        if ( num < 0 || num > 10){
+        userInput = prompt("Enter a number between 1-10")
+        if ( userInput < 0 || userInput > 10){
             fail++;
-            num = prompt("Number must be between 1-10. Try again:")
+            userInput = prompt("Number must be between 1-10. Try again:")
         }
-        if (num!= num2){
+        if (userInput!= num){
             fail++
             if(fail < 3){
                 message = confirm("wrong guess, want to try again?");
@@ -66,7 +66,7 @@ function question4(){
                 fail = 3;
             }
         }
-        if (num == num2){
+        if (userInput == num){
             alert("Good Work")
             sucess = true;
             break;
@@ -79,10 +79,22 @@ function question4(){
 }
 
 function question5(){
-
+    console.log("First 5 happy numbers:")
+    console.log(1)
+    happyCounter = 1;
+    for(var i = 1; happyCounter < 5 ; i++){
+            var firstDigit= parseInt(i.toString().charAt(0))
+            var secondDigit= parseInt(i.toString().charAt(1))
+            var result = firstDigit*firstDigit + secondDigit*secondDigit
+            if (result.toString().charAt(0) === '1'){
+                console.log(i)
+                happyCounter++
+            }
+    }
 }
 
 var q1 = question1(3, -7, 2);
 var q2 = question2();
 var q3 = question3();
 var q4 = question4();
+var q5 = question5(); 
